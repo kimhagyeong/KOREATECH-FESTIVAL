@@ -11,4 +11,5 @@ urlpatterns = [
     path('board/new/',board_write.views.new, name='new'),
     path('board/',board_main.views.board, name='board'),
     path('board/<int:board_id>', board_detail.views.detail, name='detail'),
+    path('board/detail/<int:board_id>/create/comment',board_detail.views.createcomment, name="createcomment"),
 ]
