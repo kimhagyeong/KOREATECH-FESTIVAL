@@ -2,11 +2,14 @@
 
 <p>{{board.title}}</p>
 <hr>
+
+
+<img src='{{board.image.url}}'>
+
 {{board.body}}
 
 <a href="{% url 'board' %}"><button type="button" style="float: right;">목록으로</button></a>
 
-<hr>
     <h4> 댓글</h4>
 
     <form method="POST" action='{% url "createcomment" board.id %}'>
