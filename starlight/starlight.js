@@ -44,7 +44,7 @@ function Star(width,height){
 	leftOffset=Math.round((width-width*user_configuration.coverage)/2);
 	topOffset=(height-Math.round(height*user_configuration.coverage))/2;
 	this.xposition=Math.floor(Math.random()*width*user_configuration.coverage)+leftOffset;
-	this.yposition=Math.floor(Math.random()*height*user_configuration.coverage)+topOffset;
+	this.yposition=Math.floor(Math.random()*height*user_configuration.coverage)+topOffsets;
 }
 
 //the star CSS properties
@@ -137,7 +137,7 @@ $(document).ready(function(){
 		var height=currentElement.height();
 		setInterval(function(){ //creates the stars based on the frequency and desired density
 			for(var i=0;i<user_configuration.density;i++){
-				var newStar=new Star(width,height);
+				var newStar=new Star(width, height);
 				newStar.create(currentElement,id);
 				newStar=null; //just in case so the garbage collector clears this value up
 				id++;
