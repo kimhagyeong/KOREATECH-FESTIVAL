@@ -5,3 +5,6 @@ from .models import Board
 
 def new(request) :
     return render(request,'new.html')
+
+def createPost(request) :
+    return render(request,'new.html')
