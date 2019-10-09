@@ -1,24 +1,34 @@
-<h1> detail 페이지입니다. </h1>
+<body style='background-color:gray;'>
 
-<p>{{board.title}}</p>
+<br>
+<br>
+<h1>{{board.title}}</h1>
 <hr>
 
+<table >
+    <tr>
+        <td><img src='{{board.image.url}}' height = 300px width = 300px>
+        <td style='padding: 15px;'>{{board.body}}
+    </tr>
+</table>
+<br>
 
-<img src='{{board.image.url}}'>
-
-{{board.body}}
-
+<br>
 <a href="{% url 'board' %}"><button type="button" style="float: right;">목록으로</button></a>
 
-    <h4> 댓글</h4>
-
     <form method="POST" action='{% url "createcomment" board.id %}'>
-        {% csrf_token %}
-        <div>
-            <textarea class="form-control" id="exampleFormControlTextarea1" name="text" rows="3"></textarea>
-            <h4>작성자 : </h4> <input type="text" name="author">
+        <div style = 'margin-left: 10px;'>
+            <h2> 댓글 작성하기</h2>
+            <hr>
+            <h3> 작성자 </h3>
+            <input type="text" style = "height:40px;" name="author"> 
+            <h3> 내용 </h3>
+            <textarea  name="text" cols = "100" rows="9"></textarea
         </div>
+        {% csrf_token %}
         <br>
+        <br>
+        
         <div align='right'>
             <button type="submit" class="btn btn-primary">등록</button>
         </div>
@@ -40,3 +50,4 @@
     <p>No comments here yet :(</p>
     {% endfor %}
     </div>
+</body>
