@@ -30,13 +30,15 @@ def createPost(request) :
             module_dir = os.path.dirname(__file__)
             upload_path = module_dir.split('\\board_write')
         
-
             fp = open('%s/%s' % (upload_path[0]+"\\media\\images", filename) , 'wb')
             for chunk in file.chunks():
                 fp.write(chunk)
             fp.close()
-
             boards.image = 'images/'+filename
+
+        else :
+            boards.image = 'images/default.png'
+
     
     else :
         return render(request,'new.html')
