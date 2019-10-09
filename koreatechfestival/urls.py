@@ -1,23 +1,20 @@
-"""koreatechfestival URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/2.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 import main.views
+import board_write.views
+import board_main.views
+import board_detail.views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',main.views.home, name = 'home'),
-]
+    path('board/new/',board_write.views.new, name='new'),
+    path('create/', board_write.views.createPost, name= 'createPost'),
+    path('board/',board_main.views.board, name='board'),
+    path('board/<int:board_id>', board_detail.views.detail, name='detail'),
+    path('board/detail/<int:board_id>/create/comment',board_detail.views.createcomment, name="createcomment"),
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+    

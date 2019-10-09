@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+  
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <!--웹페이지의 크기 지정, 웹 페이지의 크기가 스마트폰의 실제 액정 크기를 따라가도록,  보여지는 화면의 zoom up 정도를 1배율로,마지막은 사파리 브라우저에 사용되는 속성-->
+  <meta name="description" content="">
+  <!-- 이건 검색엔진에서 content 내용으로 검색했을 때 연관되어 뜰 수 있도록 하는 정보-->
+  <meta name="author" content="">
+
+  <title>KOREATECH FESTIVAL</title>
+
+  <!-- bootstrap css, js link-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  <!-- static css file-->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  
+  <!--searchbar link-->
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <!--fontstylelink-->
+  
+  <link href="https://fonts.googleapis.com/css?family=Gugi&display=swap&subset=korean" rel="stylesheet">
+
+
+<!--footer-->
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+  <style>
+    
+    
+
+  
+    .containerleft{
+        padding-top: 10px;
+        width:20%;
+        float:left;
+        background-color:rgb(255, 239, 210);
+      }
+      .containerbody{
+        padding-top: 10px;
+        width:60%;
+        float:left;
+        background-color:rgb(255, 239, 210);
+      }
+      .containerright{
+        padding-top: 10px;
+        width:20%;
+        float:left;
+        background-color:rgb(255, 239, 210);
+      }
+      .topnavbar{
+
+        width: 100%;
+        height:33px;
+        top:0;
+        left:0;
+       
+       background: linear-gradient( to bottom,rgb(255, 234, 196), rgb(255,215,141) );
+
+      }
+      .nav>li>a:hover, .nav>li>a:focus {
+        text-decoration: none;
+        background:rgba(255, 255, 255, 0);
+    }
+    a {
+      color:black;
+      font-size:17px;
+    }
+    a:hover{
+      color:orange;
+    }
+  .searchcolor{
+    background-color:rgb(253, 174, 84);
+    border:1.5px solid rgb(255, 255, 255);
+  }
+  .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+    color: #333;
+    background-color: rgb(255, 152, 35);
+    border-color: rgb(255, 255, 255);
+}
+.categorystyle{
+  position: relative;
+  left:50px;
+  top:-20px;
+  width:110px;
+  height:40px;
+  border-radius: 5px;
+  background-color:rgb(112,173,71);
+  z-index: 10;
+}
+.navitems{
+  color:white;
+  display:block;
+  padding:10px;
+  font-size:17px;
+}
+.navitems:hover{
+  
+  text-decoration :none;
+  color:white;
+  width:110px;
+  height:40px;
+  border-radius: 5px;
+  background-color:rgb(112,173,71);
+}
+.nav>li>a:hover, .nav>li>a:focus {
+  text-decoration: none;
+  background-color: rgba(112, 173, 71, 0);
+}
+.dropdown-item:focus, .dropdown-item:hover {
+  color: orange;
+  text-decoration: none;
+  background-color: #f8f9fa00;
+}
+
+.dropdown-menu{
+  width:200px;
+  font-size:20px;
+}
+
+.fontcolor{
+  font-size:15px;
+}
+
+.topletter{
+  font-family: 'Gugi', cursive; 
+  font-size:80px; 
+  text-align:center;
+}
+
+.textfont{
+  font-size:15px; font-family: 'Gugi', cursive; margin-left:60px;
+}
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+section{
+  margin-top:-60px;
+    padding: 60px 0;
+    position: relative;
+    width: 100%;
+
+}
+
+section .section-title {
+    text-align: center;
+    color: rgb(253, 174, 84);
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+#footer {
+    background: rgb(253, 174, 84) !important;
+}
+#footer h5{
+	padding-left: 10px;
+    border-left: 3px solid #eeeeee;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color:#ffffff;
+}
+#footer a {
+    color: #ffffff;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+#footer ul.social li{
+	padding: 3px 0;
+}
+#footer ul.social li a i {
+    margin-right: 5px;
+	font-size:25px;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.social li:hover a i {
+	font-size:30px;
+	margin-top:-10px;
+}
+#footer ul.social li a,
+#footer ul.quick-links li a{
+	color:#ffffff;
+}
+#footer ul.social li a:hover{
+	color:#eeeeee;
+}
+#footer ul.quick-links li{
+	padding: 3px 0;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.quick-links li:hover{
+	padding: 3px 0;
+	margin-left:5px;
+	font-weight:700;
+}
+#footer ul.quick-links li a i{
+	margin-right: 5px;
+}
+#footer ul.quick-links li:hover a i {
+    font-weight: 700;
+}
+
+@media (max-width:767px){
+	#footer h5 {
+    padding-left: 0;
+    border-left: transparent;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+}
+
+@import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+.login-block{
+float:left;
+width:100%;
+padding : 50px 0;
+}
+.banner-sec{background:url(https://static.pexels.com/photos/33972/pexels-photo.jpg)  no-repeat left bottom; background-size:cover; min-height:500px; border-radius: 0 10px 10px 0; padding:0;}
+.bodycontainer{background:#fff; border-radius: 10px; box-shadow:15px 20px 0px rgba(0,0,0,0.1); margin:30px 55px 30px 15px;}
+.carousel-inner{border-radius:0 10px 10px 0;}
+.carousel-caption{text-align:left; left:5%;}
+.login-sec{padding: 50px 30px; position:relative;}
+.login-sec .copy-text{position:absolute; width:80%; bottom:20px; font-size:13px; text-align:center;}
+.login-sec .copy-text i{color:#FEB58A;}
+.login-sec .copy-text a{color:#E36262;}
+.login-sec h2{margin-bottom:30px; font-weight:800; font-size:30px; color: #DE6262;}
+.login-sec h2:after{content:" "; width:100px; height:5px; background:#FEB58A; display:block; margin-top:20px; border-radius:3px; margin-left:auto;margin-right:auto}
+.btn-login{background: #DE6262; color:#fff; font-weight:600;}
+.banner-text{width:70%; position:absolute; bottom:40px; padding-left:20px;}
+.banner-text h2{color:#fff; font-weight:600;}
+.banner-text h2:after{content:" "; width:100px; height:5px; background:#FFF; display:block; margin-top:20px; border-radius:3px;}
+.banner-text p{color:#fff;}
+
+
+  </style>
+</head>
+
+
+<div class="container" style="padding-top: 100px;">
+    <h1 style="text-align: center;">KOREATECH FESTIVAL</h1>
+
+    <div style="padding-top: 100px;">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col" style="text-align: center;">순번</th>
+                    <th scope="col" style="text-align: center;">글제목</th>
+                    <th scope="col" style="text-align: center;">작성자</th>
+                    <th scope="col" style="text-align: center;">작성일자</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for board in posts %}
+                <tr onclick="location.href='{% url 'detail' board.id %}'">
+                    <th scope="row" style="text-align: center;">{{board.id}}</th>
+                    <td style="text-align: center;">{{board.title}}</td>
+                    <td style="text-align: center;">{{board.userName}}</td>
+                    <td style="text-align: center;">{{board.date}}</td>
+                </tr>
+
+
+                {%endfor%}
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <div>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    {%if posts.has_previous%}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{posts.previous_page_number}}" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="" aria-label="Previous">
+                            <span aria-disabled="true">&laquo;</span>
+                        </a>
+                    </li>
+
+                    {%endif%}
+
+
+                    {% for i in p_range %}
+
+                    {% if i == page %}
+                    <li class="page-item active"><a class="page-link" href="?page={{i}}">{{i}}</a></li>
+                    {% else %}
+                    <li class="page-item"><a class="page-link" href="?page={{i}}">{{i}}</a></li>
+                    {% endif %}
+                    {% endfor %}
+
+                    {%if posts.has_next%}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{posts.next_page_number}}" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                    {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="" aria-label="Next">
+                            <span aria-disabled="true">&raquo;</span>
+                        </a>
+                    </li>
+                    {%endif%}
+                </ul>
+            </nav>
+        </div>
+        {% if user.is_authenticated %}
+        <a href="{% url 'new' %}"><button type="button" class="btn btn-danger"
+                style="float: right;">글쓰기</button></a>
+        {% else %}
+        <button type="button" onclick="alert('로그인을 해주세요'); location.replace('../accounts/login/');"
+            class="btn btn-danger" style="float: right;">글쓰기</button>
+        {% endif %}
+    </div>
+
+    <div style="margin-bottom: 150px;"></div>
+
+</div>
