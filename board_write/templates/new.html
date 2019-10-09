@@ -1,5 +1,6 @@
-<!DOCTYPE html>
+
 {% load static %}
+
 <html>
 <head>
   
@@ -11,7 +12,7 @@
   <!-- 이건 검색엔진에서 content 내용으로 검색했을 때 연관되어 뜰 수 있도록 하는 정보-->
   <meta name="author" content="">
 
-  <title>GASILI</title>
+  <title>KOREATECH FESTIVAL</title>
 
   <!-- bootstrap css, js link-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -41,33 +42,34 @@
 </head>
 
 <body style="background-color: black">
-<div class = "menu" style="width: 80%; margin-left: 15%;">
+<div class = "menu" style="width: 80%; margin-left: 12%;">
     <form method="POST" action="{% url 'createPost'%}" enctype="multipart/form-data" name = "form1">
         {% csrf_token %}
         <div class="mb-3" style=" margin-left:55px;">
             <div class="row" style="height:50px;"></div>
             <br>
             <div class="form-group row">
-            <font size="12em" color="white">찾아주세요!</font>
+            <font size="7em" color="white">찾아주세요!</font>
             </div>
             <div class="form-group row">
                 <div class="col-10 col-form-label" >
-                    <input type="text" class="form-control" name="title" placeholder="게시물 제목을 입력해주세요."><br> 
+                    <input type="text" class="form-control" name="title" placeholder="게시물 제목을 입력해주세요." style="font-size: 2em;"><br> 
                 </div>
             
                 <div class="col-10 col-form-label">
-                    <textarea class="form-control"  rows="15" name="body" placeholder="본문 내용을 입력해주세요"></textarea>
+                    <textarea class="form-control"  rows="15" name="body" placeholder="본문 내용을 입력해주세요" style="font-size: 2em;"></textarea>
                 </div>
             </div>
             <br>
            
             <div class="form-group row">
             <div class="col-10 col-form-label">
-                    <div class="area-file">
-                            <div name="filediv">
-                            <input type="file" name="file" id="file"/>
-                            </div>
-                        </div>
+                <div name="filediv">
+                    <label for="file" style="display: inline-block; padding: .5em .75em; color: #999; font-size: 1.3em; line-height: normal; vertical-align: middle; background-color: #fdfdfd; cursor: pointer; border: 1px solid #ebebeb; border-bottom-color: #e2e2e2; border-radius: .25em;">사진 업로드</label>
+                    <input type="file" name="file" id="file" style="visibility: hidden"/>
+                    
+                </div>
+                
                 </div>
 
             </div>    
