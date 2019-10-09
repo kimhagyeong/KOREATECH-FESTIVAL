@@ -37,8 +37,8 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
 
     <!-- Bootstrap CSS File -->
-    <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
     <!-- Libraries CSS Files -->
     <link href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
     <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
@@ -53,48 +53,51 @@
             <header id="header">
             <div class="container">
                 <div id="logo" class="pull-left">
-                    <a href="#hero"><img src="{% static 'logo.png' %}" alt="" title="" /></a>
+                    <a href="#hero"><img src="{% static 'img/logo.png' %}" alt="" title="" /></a>
                     <!-- Uncomment below if you prefer to use a text logo -->
                     <!--<h1><a href="#hero">Regna</a></h1>-->
                 </div>
 
-                <nav id="nav-menu-container">
-                    <ul class="nav-menu">
-                    <li><a href="#timer">타이머</a></li>
-                    <li><a href="#promotion">홍보물</a></li>
-                    <li><a href="#lineup">라인업</a></li>
-                    <li><a href="#lost">분실물</a></li>
+                <nav id="navbar-example2" class="navbar navbar-light">
+                    <ul class="nav nav-pills">
+                    <li><a class="nav-link" href="#timer">타이머</a></li>
+                    <li><a class="nav-link" href="#promotion">홍보물</a></li>
+                    <li><a class="nav-link" href="#lineup">라인업</a></li>
+                    <li><a class="nav-link" href="#lost">분실물</a></li>
                     </ul>
                 </nav><!-- #nav-menu-container -->  
             </div>
             </header><!-- #header -->
         </div>
-    
-        <p class="timer" id="clock" style="font-size:500%; color:white;"></p>
+        <div data-spy="scroll" data-target="navbar-example2" data-offset="0">
+        
+        <section id="timer" class="sectionstyle">
+        <p id="clock" style="font-size:500%; color:white;"></p>
         <h3 class="subtitle" style="color:#AAAAAA;">KOREATECH FESTIVAL 2019. 10. 17 ~ 18</h3>
 
             <script type="text/javascript"
                 src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
             </script>
         </div>
-
-        
-        <section id="timer" class="sectionstyle">
-        <h1 class="title">KOREATECH FESTIVAL</h1>
-        <h3 class="subtitle">2019. 10. 17 ~ 18</h3>
         </section>
         
-        <section id="promotion" class="sectionstyle">
-        <h1 class="title">KOREATECH FESTIVAL2</h1>
+        <section class="sectionstyle">
+        <h1 id="promotion" class="title">KOREATECH FESTIVAL2</h1>
         </section>
 
         <section id="lineup" class="sectionstyle">
-          <h1 class="title">KOREATECH FESTIVAL2</h1>
-         </section>
+        <div class="row" style="margin:10%">
+            <div class="col"><img src="{% static 'img/bol4.png' %}" alt="" title="" style="width:100% ; height:100%"/></div>
+            <div class="col"><img src="{% static 'img/mondaykids.png' %}" alt="" title="" style="width:100%; height:100%;"/></div>
+        </div>
 
         <section id="lost" class="sectionstyle">
-          <h1 class="title">KOREATECH FESTIVAL2</h1>
+        <div class="row" style="margin:10%;">
+            <div class="col"><img src="{% static 'img/lostButton1.png' %}" alt="" title="" style="width:70%; height:100%; margin-left: 30%"/></div>
+            <div class="col"><img src="{% static 'img/lostButton2.png' %}" alt="" title="" style="width:70%; height:100%; margin-right: 30%"/></div>
+        </div>
         </section>
+    </div>
     </div>
     
     <script type="text/javascript">

@@ -22,7 +22,8 @@ def createPost(request) :
         boards.title = request.POST['title']
         boards.body = request.POST['body']
 
-        if request.POST['body'] == True :
+        
+        try :
             fileStr = 'file'
             file = request.FILES[fileStr]
             filename = rand_str()+".PNG"
@@ -36,7 +37,7 @@ def createPost(request) :
             fp.close()
             boards.image = 'images/'+filename
 
-        else :
+        except :
             boards.image = 'images/default.png'
 
     
