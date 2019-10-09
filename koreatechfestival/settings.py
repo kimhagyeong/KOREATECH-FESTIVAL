@@ -31,6 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'board_write',
+    'board_main',
+    'board_detail',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
