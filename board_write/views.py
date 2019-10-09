@@ -22,24 +22,23 @@ def createPost(request) :
         boards.title = request.POST['title']
         boards.body = request.POST['body']
 
-        fileStr = 'file'
-        file = request.FILES[fileStr]
-        filename = rand_str()+".PNG"
+        if request.POST['body'] == True :
+            fileStr = 'file'
+            file = request.FILES[fileStr]
+            filename = rand_str()+".PNG"
 
-        module_dir = os.path.dirname(__file__)
-        upload_path = module_dir.split('\\board_write')
-        print(module_dir)
-        print(upload_path)
+            module_dir = os.path.dirname(__file__)
+            upload_path = module_dir.split('\\board_write')
+        
 
-        fp = open('%s/%s' % (upload_path[0]+"\\media\\images", filename) , 'wb')
-        for chunk in file.chunks():
-            fp.write(chunk)
-        fp.close()
+            fp = open('%s/%s' % (upload_path[0]+"\\media\\images", filename) , 'wb')
+            for chunk in file.chunks():
+                fp.write(chunk)
+            fp.close()
 
-        boards.image = 'images/'+filename
+            boards.image = 'images/'+filename
     
     else :
-
         return render(request,'new.html')
     
     boards.save()
