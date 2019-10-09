@@ -14,4 +14,7 @@ urlpatterns = [
     path('create/', board_write.views.createPost, name= 'createPost'),
     path('board/',board_main.views.board, name='board'),
     path('board/<int:board_id>', board_detail.views.detail, name='detail'),
+    path('board/detail/<int:board_id>/create/comment',board_detail.views.createcomment, name="createcomment"),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+    
