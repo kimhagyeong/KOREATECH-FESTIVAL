@@ -1,11 +1,18 @@
 html, body{
 	width: 100%;
-	height: 100%;
+	height: auto;
 	background-color: hsl(270, 10%, 10%);
 	padding:0;
 	margin:0;
-	overflow: hidden;
+	overflow: auto;
 }
+
+.sectionstyle {
+	height:100vh; 
+	text-align:center; 
+	padding-top: 20%;
+  }
+
 h1,h2,h3,h4,h5,h6,a{
 	font-family: Arial, sans-serif;
 }
@@ -19,6 +26,7 @@ h1,h2,h3,h4,h5,h6,a{
 
 .wrapper{
 	display: flex;
+	
 	justify-content: center;
 	height: auto;
 	align-items: center;
