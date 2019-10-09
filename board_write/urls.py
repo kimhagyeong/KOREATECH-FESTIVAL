@@ -4,9 +4,7 @@ import main.views
 import board_write.views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('',main.views.home, name = 'home'),
-    path('board/new/',board_write.views.new, name='new'),
-    path('create/', board_write.views.createPost, name= 'createPost'),
-
+    #path('create/', views.createPost, name= 'createPost'),
+    
 ]
