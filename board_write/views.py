@@ -18,10 +18,11 @@ def createPost(request) :
     if request.method == 'POST' :
         boards = Board()
 
+        
         boards.title = request.POST['title']
         boards.body = request.POST['body']
-        fileStr = 'file'
 
+        fileStr = 'file'
         file = request.FILES[fileStr]
         filename = rand_str()+".PNG"
 
@@ -42,6 +43,6 @@ def createPost(request) :
         return render(request,'new.html')
     
     boards.save()
-    return render(request,'new.html')
+    return redirect('/board/' + str(boards.id)) # URL 경로 board로
     
     
