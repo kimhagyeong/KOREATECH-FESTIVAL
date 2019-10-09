@@ -1,10 +1,8 @@
-from django.contrib import admin
-from django.urls import path, include
-import main.views
-import board_write.views
+from django.urls import path
+from . import views
 
 urlpatterns = [
-    path('',main.views.home, name = 'home'),
-    #path('create/', views.createPost, name= 'createPost'),
-    
+    #path('',main.views.home, name = 'home'),
+    path('', views.new, name='new'),
+    path('create/', views.createPost, name='createPost'),
 ]
