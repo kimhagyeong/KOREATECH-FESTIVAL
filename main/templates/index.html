@@ -9,7 +9,28 @@
 	<link rel="stylesheet" href="{% static 'style/sample.css' %}">
 	<link rel="stylesheet" href="{% static 'style/buttons.css' %}">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
-	<script src="{% static 'starlight/starlight.js' %}"></script>
+    <script src="{% static 'starlight/starlight.js' %}"></script>
+    <script>
+        setInterval(function(){
+            var target = new Date('October 16, 00:00:00');
+            var timer = new Date();
+            var d = target.getDate()-timer.getDate();
+            var s = 59- timer.getSeconds();
+            var m = 59- timer.getMinutes();
+            var h = 23 - timer.getHours();
+        
+            document.getElementById('clock').innerHTML = d + " Days ";
+            if(h<10) document.getElementById('clock').innerHTML = document.getElementById('clock').innerHTML + " 0" + h;
+            else document.getElementById('clock').innerHTML = document.getElementById('clock').innerHTML + " " + h;
+            if(m<10)  document.getElementById('clock').innerHTML = document.getElementById('clock').innerHTML + ":0" + m;
+            else document.getElementById('clock').innerHTML = document.getElementById('clock').innerHTML + ":" + m;
+            if(s<10)  document.getElementById('clock').innerHTML = document.getElementById('clock').innerHTML + ":0" + s;
+            else document.getElementById('clock').innerHTML = document.getElementById('clock').innerHTML + ":" + s;
+        },1000);
+    </script>
+
+    
+    
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
@@ -70,8 +91,10 @@
             </div>
             </header><!-- #header -->
         </div>
-        <h1 class="title">KOREATECH FESTIVAL</h1>
-        <h3 class="subtitle">2019. 10. 17 ~ 18</h3>
+
+        
+        <p class="timer" id="clock" style="font-size:500%; color:white;"></p>
+        <h3 class="subtitle" style="color:#AAAAAA;">KOREATECH FESTIVAL 2019. 10. 17 ~ 18</h3>
         <div class="jquery-script-ads" style="margin:30px auto">
             <script type="text/javascript"><!--
                 google_ad_client = "ca-pub-2783044520727903";
