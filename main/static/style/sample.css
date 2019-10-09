@@ -7,14 +7,17 @@ html, body{
 	overflow: auto;
 	-ms-overflow-style: none; 
 }
+
 ::-webkit-scrollbar { 
 	display: none !important; 
-  }
+}
+
 .sectionstyle {
 	height:100%; 
+	width:100%;
 	text-align:center; 
-	padding-top: 20%;
-  }
+	padding:10% 20% 10% 20%;
+}
 
 h1,h2,h3,h4,h5,h6,a{
 	font-family: Arial, sans-serif;
@@ -112,15 +115,15 @@ h1,h2,h3,h4,h5,h6,a{
   }
 
 
-/* Nav Meu Container */
-#nav-menu-container {
+  /* Nav Meu Container */
+  #nav-menu-container {
 	float: right;
 	margin: 0;
   }
   
   @media (max-width: 768px) {
 	#nav-menu-container {
-	  display: none;
+	  display: inline;
 	}
   }
   
@@ -213,7 +216,7 @@ h1,h2,h3,h4,h5,h6,a{
 	color: #fff;
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 769px) {
 	#mobile-nav-toggle {
 	  display: inline;
 	}
