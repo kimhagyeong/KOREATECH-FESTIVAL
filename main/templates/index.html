@@ -53,7 +53,7 @@
         <header id="header">
         <div class="container">
             <div id="logo" class="pull-left">
-                <a href="#timer"><img width=150px src="{% static 'img/logo.png' %}" alt="" title="" /></a>
+                <a href="{% url 'home' %}"><img width=150px src="{% static 'img/logo.png' %}" alt="" title="" /></a>
                 <!-- Uncomment below if you prefer to use a text logo -->
                 <!--<h1><a href="#hero">Regna</a></h1>-->
             </div>
@@ -90,8 +90,8 @@
 
         <section id="lost" class="sectionstyle" >
         <div class="row" style="padding:10%;">
-            <div class="col"><img src="{% static 'img/lostButton1.png' %}" alt="" title="" style="width:70%; height:100%; margin-left: 20%"/></div>
-            <div class="col"><img src="{% static 'img/lostButton2.png' %}" alt="" title="" style="width:70%; height:100%; margin-right: 20%"/></div>
+            <div class="col"><a href = "{% url 'board' %}"}><img src="{% static 'img/lostButton1.png' %}" alt="" title="" style="width:70%; height:100%; margin-left: 20%"/></a></div>
+            <div class="col"><a href = "{% url 'board' %}"}><img src="{% static 'img/lostButton2.png' %}" alt="" title="" style="width:70%; height:100%; margin-right: 20%"/></a></div>
         </div>
         </section>
     </div>
